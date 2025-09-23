@@ -16,11 +16,11 @@ export const About = () => {
           <div className=" rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all">
             <p className="text-gray-300 mb-0 ">
               Hello, I'm Daniel Hoang, currently a sophomore with a CS major at
-              UT Austin. I am a long-time lover of gaming and computers, and
+              UT Austin. I am a long-time lover of gaming and computers and
+              hope to continue this journey through coding whether it be game
+              developing or building raw ideas, I'm all in for it.
               
             </p>
-            <p className="text-gray-300 mb-3 "> hope to continue this journey through coding whether it be game
-              developing or building raw ideas, I'm all in for it.</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
                 <h3 className="text-xl font-bold mb-4"> Frontend</h3>
