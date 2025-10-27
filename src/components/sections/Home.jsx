@@ -11,7 +11,7 @@ export const Home = () => {
           Hello, my name is Daniel Hoang.
         </h1>
         <p className="text-gray-400 text-lg mb-8 max-w-lg mx-auto">
-          I'm currently a incoming sophmore for the University of Austin
+          Current Status: Sophmore
         </p>
         <div className="flex justify-center space-x-4">
           <a
