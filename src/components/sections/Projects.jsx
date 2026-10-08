@@ -1,5 +1,48 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 
+const projects = [
+  {
+    title: "File System Checker",
+    date: "Aug 2026",
+    bullets: [
+      "Developed a 5-pass consistency checker for the EXT2 file system within a multithreaded VM kernel environment, capable of validating disk images up to 10 GB containing over 50,000 inodes.",
+      "Traversed on-disk data structures including superblocks, inodes, bitmaps, and directory entries across multiple validation passes, rebuilding filesystem state and detecting metadata and allocation inconsistencies.",
+      "Leveraged multithreading to parallelize directory traversal and block validation, reducing total file system scan time by 40% compared to a single-threaded approach.",
+    ],
+    tech: ["C++", "Linux"],
+    link: "https://github.com/Devoanic/FSCK",
+  },
+  {
+    title: "Dynamic Memory Allocator",
+    date: "Sep 2025",
+    bullets: [
+      "Implemented a custom memory allocator in C, utilizing free-list data structures and best-fit search to optimize memory placement, reducing average allocation latency by 30% compared to a standard implicit-list approach.",
+      "Engineered block metadata structures using bit-manipulation to accurately track allocation status and block sizes, minimizing memory overhead and streamlining pointer arithmetic.",
+      "Designed block splitting and coalescing strategies to complement the best-fit approach, reducing external fragmentation by up to 20%.",
+    ],
+    tech: ["C", "Linux", "SSH Configuration"],
+  },
+  {
+    title: "Algorithm Visualizer (Roblox)",
+    date: "Sep 2025",
+    bullets: [
+      "Developed software features visualizing BFS, DFS, and Dijkstra's algorithms using structured data models.",
+      "Implemented automated test scenarios to validate algorithm correctness and regression behavior.",
+      "Collected and evaluated execution metrics (runtime, path cost) to assess application performance.",
+    ],
+    tech: ["Lua", "Roblox Studio"],
+    link: "https://www.roblox.com/games/138463959388509/Algorithm-Simulator",
+  },
+  {
+    title: "Marvel Rivals Character Randomizer",
+    bullets: [
+      'Built a lightweight web tool that randomizes agents for the game "Marvel Rivals".',
+    ],
+    tech: ["Html", "Javascript"],
+    link: "https://devoanic.github.io/marvelrivalsRandom/",
+  },
+];
+
 export const Projects = () => {
   return (
     <section
@@ -7,68 +50,55 @@ export const Projects = () => {
       className="min-h-screen flex items-center justify-center py-20"
     >
       <RevealOnScroll>
-      <div className="max-w-5xl mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
-          Featured Projects
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div
-            className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
+            Featured Projects
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {projects.map((project) => (
+              <div
+                key={project.title}
+                className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30
           hover:shadow-[0_2px_8px_rgba(59,130,246,0.2] transition"
-          >
-            <h3 className="text-xl font-bold mb-2">Marvel Rivals Character Randomizer</h3>
-            <p className="text-gray-400 mb-4">Built a lightweight web tool that randomizes agents for the game “Marvel Rivals"</p>
-            <div>
-              {["Html", "Javascript"].map((tech, key) => (
-                <span
-                  key={key}
-                  className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 
-                  hover:shadow-[0_2px_8px_rgba(59,130,246,0.1] transition-all"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-            <div className="flex justify-between items-center">
-              <a
-                href="https://devoanic.github.io/marvelrivalsRandom/"
-                className="text-blue-400 hover:text-blue-300 transition-colors my-4"
               >
-                View Project
-              </a>
-            </div>
-          </div>
-          <div
-            className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 
-          hover:shadow-[0_2px_8px_rgba(59,130,246,0.2] transition"
-          >
-            <h3 className="text-xl font-bold mb-2">Algorithm Visualizer (Roblox)</h3>
-            <p className="text-gray-400 mb-4"> - Created an interactive pathfinder visualizer, implementing BFS, DFS, and Dijkstra's on a dynamic grid enviorment
-            </p>
-             <p className="text-gray-400 mb-4"> - Incorporated variable terrain costs (e.g., mud tiles) and measured path cost, length, and execution time to compare algorithm efficiency
-            </p>
-            <div>
-              {["Lua"].map((tech, key) => (
-                <span
-                  key={key}
-                  className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 
+                <div className="flex justify-between items-baseline gap-4 mb-2">
+                  <h3 className="text-xl font-bold">{project.title}</h3>
+                  {project.date && (
+                    <span className="text-sm text-gray-500 whitespace-nowrap">
+                      {project.date}
+                    </span>
+                  )}
+                </div>
+                <ul className="text-gray-400 mb-4 list-disc list-outside pl-5 space-y-2">
+                  {project.bullets.map((bullet, key) => (
+                    <li key={key}>{bullet}</li>
+                  ))}
+                </ul>
+                <div className="flex flex-wrap gap-2">
+                  {project.tech.map((tech, key) => (
+                    <span
+                      key={key}
+                      className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20
                   hover:shadow-[0_2px_8px_rgba(59,130,246,0.1] transition-all"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-            <div className="flex justify-between items-center">
-              <a
-                href="https://www.roblox.com/games/138463959388509/Algorithm-Simulator"
-                className="text-blue-400 hover:text-blue-300 transition-colors my-4"
-              >
-                View Project
-              </a>
-            </div>
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                {project.link && (
+                  <div className="flex justify-between items-center">
+                    <a
+                      href={project.link}
+                      className="text-blue-400 hover:text-blue-300 transition-colors my-4"
+                    >
+                      View Project
+                    </a>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
-      </div>
       </RevealOnScroll>
     </section>
   );

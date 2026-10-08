@@ -67,24 +67,28 @@ export const About = () => {
               <h3 className="text-xl font-bold mb-4">Work Experience</h3>
               <div className="space-y-4 text-gray-300">
                 <div>
-                  <h4 className="font-semibold">Whataburger (Summer 2023)</h4>
-                  <p>Fryer/Cook</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold">SchlitterBahn (Summer 2024)</h4>
-                  <p>Pool Cleaner</p>
+                  <h4 className="font-semibold">
+                    Code2Career | Google x Basta (Mar 2026 - Current)
+                  </h4>
+                  <p>
+                    Selected among 100 students from 1,000+ applicants for a
+                    10-week mentorship with a Google Software Engineer focused
+                    on algorithms and data structures. Strengthened
+                    problem-solving and debugging through intensive coding
+                    practice, technical discussions, and code review sessions.
+                  </p>
                 </div>
                 <div>
                   <h4 className="font-semibold">
-                    Red Circle Boba (Summer 2024)
+                    AI Trainer, Handshake (May 2026 - Jul 2026)
                   </h4>
-                  <p>Boba drink maker</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold">
-                    Round Table Pizza (Summer 2025)
-                  </h4>
-                  <p>Cashier/Busser</p>
+                  <p>
+                    Reviewed 50+ short-form video clips weekly to evaluate
+                    AI-generated captions, ran quality assurance on peer
+                    annotations, and rewrote flagged text for phrasing, context,
+                    and audio alignment, contributing to a 30% improvement in
+                    dataset quality and reliability.
+                  </p>
                 </div>
               </div>
             </div>
