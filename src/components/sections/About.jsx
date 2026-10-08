@@ -72,7 +72,7 @@ export const About = () => {
               <ul className="list-disc list-inside text-gray-300 space-y-2">
                 <li>
                   <strong>B.S. in Computer Science</strong> - University of
-                  Texas at Austin (Expected Graduation 2028), GPA 3.3/4.0
+                  Texas at Austin (Expected Graduation 2028)
                 </li>
                 <li>
                   Relevant Coursework: Data Structures, Discrete Math,
