@@ -1,7 +1,24 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 export const About = () => {
-  const frontendSkills = ["React", "Typescript", "TailwindCSS", "HTML"];
-  const backendSkills = ["Java", "Lua", "C++", "C", "Javascript"];
+  const languages = [
+    "Java",
+    "JavaScript",
+    "Python",
+    "TypeScript",
+    "C++",
+    "C",
+    "R",
+    "Lua",
+  ];
+  const frameworksAndTools = [
+    "React.js",
+    "Next.js",
+    "Node.js",
+    "React Native",
+    "TailwindCSS",
+    "AWS",
+    "Git",
+  ];
 
   return (
     <section
@@ -15,16 +32,16 @@ export const About = () => {
           </h2>
           <div className=" rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all">
             <p className="text-gray-300 mb-0 ">
-              Hello, I'm Daniel Hoang, currently a sophomore with a CS major at
+              Hello, I'm Daniel Hoang, currently a Computer Science major at
               UT Austin. I am a long-time lover of gaming and computers and hope
               to continue this journey through coding whether it be game
               developing or building raw ideas, I'm all in for it.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-                <h3 className="text-xl font-bold mb-4"> Frontend</h3>
+                <h3 className="text-xl font-bold mb-4"> Languages</h3>
                 <div className="flex flex-wrap gap-2">
-                  {frontendSkills.map((tech, key) => (
+                  {languages.map((tech, key) => (
                     <span
                       key={key}
                       className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2] transition"
@@ -35,9 +52,9 @@ export const About = () => {
                 </div>
               </div>
               <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-                <h3 className="text-xl font-bold mb-4"> Backend</h3>
+                <h3 className="text-xl font-bold mb-4"> Frameworks &amp; Tools</h3>
                 <div className="flex flex-wrap gap-2">
-                  {backendSkills.map((tech, key) => (
+                  {frameworksAndTools.map((tech, key) => (
                     <span
                       key={key}
                       className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2] transition"
@@ -55,11 +72,12 @@ export const About = () => {
               <ul className="list-disc list-inside text-gray-300 space-y-2">
                 <li>
                   <strong>B.S. in Computer Science</strong> - University of
-                  Texas at Austin (Expected Graduation 2028)
+                  Texas at Austin (Expected Graduation 2028), GPA 3.3/4.0
                 </li>
                 <li>
-                  Relevant Coursework: Data Structures, Discrete Math, Computer
-                  Architecture
+                  Relevant Coursework: Data Structures, Discrete Math,
+                  Competitive Programming, Computer Architecture, Linear
+                  Algebra, Operating Systems, Algorithms and Complexity
                 </li>
               </ul>
             </div>
